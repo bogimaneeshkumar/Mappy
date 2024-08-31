@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+    <!--PWA  -->
+    <!-- #B12A34 <-Meroon red which displayed once app loaded ie this is what looks every time  -->
+    
+
+
+   <!-- we have commented to remove splash screen  -->
+    <!-- <meta name="theme-color" content=" #B12A34">  -->
+    <!-- it is not so dominnat add same color in manifest -->
+<!-- Ios Support -->
+<!-- <link rel="apple-touch-icon" href="./icons/apple-icon-114x114.png">
+<link rel="apple-mobile-web-app-status-bar" content="#aa7700"> -->
+
+<link rel="manifest" href="./manifest.json">
+
+
+
+
+    <!--  FAvICONS -->
+    <link rel="shortcut icon" href="./icons/favicon-16x16.png" type="image/x-icon">
+
+
+
+
+
+    <title>Mappy-WebApp </title>
+
+    <!-- leaflet css  -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<link rel="stylesheet" href="./style.css">
+
+
+
+  
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+ <!--leaflet routing machine-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/introjs.min.css"  />
+
+<!-- custom -->
+<link rel="stylesheet" href="introjs.css">
+
+
+    <style>
+       body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #map {
+   
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+        .search {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .here{
+    text-decoration: none;
+    border: red solid 5px;
+}
+.reload{
+    height: 50px;
+    width: 50px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+    </style>
+</head>
+
+<body>
+
+   
+    
+
+
+  <div id="update-banner" data-state="noupdate">
+
+   
+    <div class="content">
+        <img class="reload" src="./icons/reload.png" alt="reload">
+        <div>
+        <div class="headline">No update available</div>
+        <div class="subhead">Waiting for an update to become available</div>
+    </div>
+    </div>
+</div>
+
+
+    <div id="map">  
+
+        <div class="admin-btn">
+            <div>
+                <button class="btn"><span style='font-size:20px;'>&#128272;</span></button>
+            </div>
+        </div>
+        
+        <div class="leaflet-control search">
+       
+
+            <div class="wrapper">
+        
+        
+                <div class="search-input">
+                   
+                    
+            <form autocomplete="off">
+                
+                <input type="text" placeholder="Search Places Here.." name="q" class="search-suggest"id="q"  />
+               <button  type="reset"  class="cross"><i  id="mark"class="fa fa-close"></i></button> 
+               
+                <div class="icon"  > <i id="search"class="fas fa-search">  </i></div> 
+           
+          
+            </form>
+            
+            <div id="result"></div>
+            
+            
+        </div>
+        
+        
+        </div>
+        
+        
+        
+        <!--<a href="./admin.html" class="btn-flip" data-back="Back" data-front="Go to Admin"></a>-->
+        
+        
+        </div>
+
+
+
+</div>
+
+   
+    
+    
+ 
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- Adding register service worker -->
+<script src="./RegisterServiceWorker.js"></script>
+<script type="module" src="./index.js"></script>
+
+<!-- leaflet js  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+<!--leaflet routing machine-->
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+
+
+
+
+
+
+<!--axios-->
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--geocoder-->
+<!-- introjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.0.1/intro.min.js" ></script>
+
+
+
+

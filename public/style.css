@@ -1,0 +1,306 @@
+
+
+
+
+
+/* update banner */
+#update-banner {
+  display: none;
+  width: 100vw;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: rgba(49, 49, 224, 0.2) 0px 7px 29px 0px;
+  color: #FFFFFF;
+  background:#22ba5d;
+  z-index: 9999;
+  
+}
+
+#update-banner .content {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 20px;
+}
+
+#update-banner .headline {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+#update-banner .subhead {
+  font-size: 13px;
+}
+
+#update-banner[data-state="updateavailable"] {
+  display: block;
+  cursor: pointer;
+  background: #26AE60;
+  box-shadow: 10px 16px 21px 0px rgba(0,0,0,0.1);
+  z-index: 99999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-right > div{
+  top: 565px;
+ right: -5px;
+ 
+}
+
+
+
+
+
+
+ul { cursor: pointer;
+ }
+.here{
+text-decoration: none;
+background-color: blue;
+border: red solid 3px;
+}
+
+
+
+
+
+
+.innerulist{
+  font-size: medium;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+padding-top: 7px;
+padding-bottom: 7px;
+padding-left: 7px;
+}
+.innerulist:hover{
+background-color:grey;
+opacity: 0.5;
+color: #efefef
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  
+  padding: 0 20px;
+}
+.search-suggest{
+  width: 60vw;
+  height: 4vh;
+}
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+
+.wrapper{
+  max-width: 75vw;
+  margin: 0px auto;
+}
+
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .result{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .result{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.result li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .result li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  height: 5.5vh;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: gray;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.search-input .random{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 5.5vh;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: gray;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.search-input .icon:hover{
+  
+  color: blue;
+  
+}
+.search-input .cross{
+display: none;
+  position: absolute;
+  border-radius: 50%;
+  right: 60px;
+  top: 15px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 15px;
+ 
+  color: black;
+ opacity: 0.6;
+ background-color: #fbf7f7;
+
+  
+  cursor: pointer;
+}
+#mark{
+  position: relative;
+  bottom: 18px;
+}
+
+
+
+.leaflet-routing-container{
+  top: 60vh;
+  right: 200px;
+  z-index: 999;
+  height : 500px;
+  
+}
+/* routing box */
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-right > div.leaflet-routing-container.leaflet-bar.leaflet-routing-collapsible.leaflet-control{
+right: 75px;
+bottom: 50px;
+}
+
+
+.leaflet-routing-alt-minimized {
+  color: #888;
+  max-height: 40px;
+  overflow-x: hidden;
+  cursor: pointer;
+  z-index: 999;
+  right: 300px;
+  
+}
+
+.leaflet-routing-alt {
+ 
+  width: 70vw;
+ 
+  border-bottom: 1px solid #ccc;
+  height: 15vh;
+  overflow-y: auto;
+  z-index: 999;
+  transition: all 0.2s ease;
+  right:200px;
+  
+}
+
+/* admin button */
+
+
+.code{
+  color: rgb(0, 0, 0);
+  background-color: #ccc;
+  height: 30px;
+  padding: 3px;
+   
+}
+.admin-btn{
+ width: 20px;
+ position: absolute;
+ 
+  margin-top: 10px;
+  margin-left: 20px;
+  z-index: 9999;
+  
+}
+.btn{
+ 
+  height:40px;
+  width: 40px;
+  box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
